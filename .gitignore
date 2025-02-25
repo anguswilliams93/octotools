@@ -174,3 +174,6 @@ logs/
 # [Octotools] ingore all cache directories
 cache/
 tool_cache/
+
+#pytest
+tests/
