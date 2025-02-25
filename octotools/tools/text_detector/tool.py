@@ -3,6 +3,7 @@
 import os
 import time
 from octotools.tools.base import BaseTool
+from torch import cuda
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -108,7 +109,7 @@ class Text_Detector_Tool(BaseTool):
                     print(f"CUDA out of memory error on attempt {attempt + 1}.")
                     if clear_cuda_cache:
                         print("Clearing CUDA cache and retrying...")
-                        torch.cuda.empty_cache()
+                        cuda.empty_cache()
                     else:
                         print(f"Retrying in {retry_delay} seconds...")
                     time.sleep(retry_delay)
