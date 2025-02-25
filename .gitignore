@@ -176,4 +176,5 @@ cache/
 tool_cache/
 
 #pytest
+.pytest_cache/
 tests/
